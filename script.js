@@ -4,10 +4,12 @@ const searchBar = document.querySelector("#search-bar");
 
 
 let page = 3;
-const secretKey = `VNWoTH4CPSAWcXAdE9FOC0yRuhAI1Kzr8E2JYF2crN4`;
+const secretKey = `Your Unsplash api key`;
 
 const getImages = async () => {
   try {
+
+    //getting the value form the search bar
     const val = searchBar.value;
     const Url = `https://api.unsplash.com/search/photos?page=${page}&query=${val}&client_id=${secretKey}&per_page=12`;
     const fetchData = await fetch(Url);
